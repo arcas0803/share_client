@@ -1,7 +1,7 @@
 library share_client;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'localization/share_localizations.dart';
+export 'src/share_client.dart';
+export 'src/share_client_impl.dart';
+export 'src/share_failure.dart';
+export 'src/share_failure_util.dart';
