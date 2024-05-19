@@ -35,7 +35,7 @@ class ShareClientImpl implements ShareClient {
 
     return Result.asyncGuard(
       () async {
-        await Share.shareFiles([path]);
+        await Share.shareXFiles([XFile(path)]);
 
         _logger?.d('[SUCCESS] file $path shared');
 
@@ -68,7 +68,7 @@ class ShareClientImpl implements ShareClient {
 
     return Result.asyncGuard(
       () async {
-        await Share.shareFiles(paths);
+        await Share.shareXFiles(paths.map((e) => XFile(e)).toList());
 
         _logger?.d('[SUCCESS] files $paths shared');
 
